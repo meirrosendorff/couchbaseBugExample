@@ -1,0 +1,298 @@
+09-14 10:08:56.571  5903  5903 I CouchbaseLite/DATABASE: [JAVA] CBL-ANDROID Initialized: CouchbaseLite Android v3.0.0-192@31 (CE/release, Commit/unofficial@1f4001b9647c Core/3.0.0 (192) at 2022-01-27T02:25:59.415601Z) on Java; Android 10; TC26
+09-14 10:08:56.588  5903  5903 I CouchbaseLite/DATABASE: {DB#1}==> N8litecore14SQLiteDataFileE /data/data/com.example.getstarted_ktx/files/link.cblite2/db.sqlite3 @0x70f80baec0
+09-14 10:08:56.588  5903  5903 I CouchbaseLite/DATABASE: {DB#1} Opening database
+09-14 10:08:56.589  5903  5903 I CouchbaseLite/DATABASE: PRAGMA auto_vacuum=incremental; PRAGMA journal_mode=WAL; BEGIN; CREATE TABLE IF NOT EXISTS   kvmeta (name TEXT PRIMARY KEY, lastSeq INTEGER DEFAULT 0, purgeCnt INTEGER DEFAULT 0) WITHOUT ROWID; PRAGMA user_version=400; END;
+09-14 10:08:56.630  5903  5903 I CouchbaseLite/DATABASE: ... PRAGMA auto_vacuum
+09-14 10:08:56.630  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:56.631  5903  5903 I CouchbaseLite/DATABASE: CREATE TABLE IF NOT EXISTS kv_default (  key TEXT PRIMARY KEY,  sequence INTEGER,  flags INTEGER DEFAULT 0,  version BLOB,  body BLOB,  extra BLOB)
+09-14 10:08:56.632  5903  5903 I CouchbaseLite/DATABASE: PRAGMA cache_size=-10240; PRAGMA mmap_size=52428800; PRAGMA synchronous=normal; PRAGMA journal_size_limit=5242880; PRAGMA case_sensitive_like=true
+09-14 10:08:56.633  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:56.633  5903  5903 I CouchbaseLite/DATABASE: CREATE TABLE IF NOT EXISTS kv_info (  key TEXT PRIMARY KEY,  sequence INTEGER,  flags INTEGER DEFAULT 0,  version BLOB,  body BLOB,  extra BLOB)
+09-14 10:08:56.634  5903  5903 I CouchbaseLite/DATABASE: Compiling SQL "SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?"
+09-14 10:08:56.635  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.636  5903  5903 V CouchbaseLite/DATABASE: {DB#1} begin transaction
+09-14 10:08:56.636  5903  5903 I CouchbaseLite/DATABASE: BEGIN
+09-14 10:08:56.636  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.637  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.638  5903  5903 I CouchbaseLite/DATABASE: Seeding the mbedTLS random number generator...
+09-14 10:08:56.639  5903  5903 V CouchbaseLite/DATABASE: {DB#1} KeyStore(info) set 'publicUUID'
+09-14 10:08:56.640  5903  5903 I CouchbaseLite/DATABASE: Compiling SQL "INSERT OR REPLACE INTO kv_info (key, version, body) VALUES (?, ?, ?)"
+09-14 10:08:56.640  5903  5903 I CouchbaseLite/DATABASE: ... INSERT OR REPLACE INTO kv_info (key, version, body) VALUES (?, ?, ?)
+09-14 10:08:56.641  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.641  5903  5903 V CouchbaseLite/DATABASE: {DB#1} KeyStore(info) set 'privateUUID'
+09-14 10:08:56.642  5903  5903 I CouchbaseLite/DATABASE: ... INSERT OR REPLACE INTO kv_info (key, version, body) VALUES (?, ?, ?)
+09-14 10:08:56.642  5903  5903 V CouchbaseLite/DATABASE: {DB#1} KeyStore(info) set 'versioning'
+09-14 10:08:56.642  5903  5903 I CouchbaseLite/DATABASE: ... INSERT OR REPLACE INTO kv_info (key, version, body) VALUES (?, ?, ?)
+09-14 10:08:56.643  5903  5903 V CouchbaseLite/DATABASE: {DB#1} commit transaction
+09-14 10:08:56.643  5903  5903 I CouchbaseLite/DATABASE: COMMIT
+09-14 10:08:56.644  5903  5903 I CouchbaseLite/DATABASE: {N8litecore14CollectionImplE#2}==> N8litecore14CollectionImplE link/_default @0x70f8155b90
+09-14 10:08:56.644  5903  5903 I CouchbaseLite/DATABASE: {N8litecore14CollectionImplE#2} Instantiated
+09-14 10:08:56.645  5903  5903 I CouchbaseLite/DATABASE: ... SELECT substr(name,4) FROM sqlite_master WHERE type='table' AND name GLOB 'kv_*'
+09-14 10:08:56.646  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:56.646  5903  5903 V CouchbaseLite/DATABASE: {DB#1} Next expiration time is 0
+09-14 10:08:56.649  5903  5903 W CouchbaseLite/DATABASE: [JAVA] Database.log.getFile().getConfig() is now null: logging is disabled.  Log files required for product support are not being generated.
+09-14 10:08:56.672  5903  5903 V CouchbaseLite/DATABASE: {DB#1} begin transaction
+09-14 10:08:56.673  5903  5903 I CouchbaseLite/DATABASE: BEGIN
+09-14 10:08:56.674  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.688  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.688  5903  5903 I CouchbaseLite/DATABASE: Compiling SQL "INSERT OR IGNORE INTO kv_default (version, body, extra, flags, sequence, key) VALUES (?, ?, ?, ?, ?, ?)"
+09-14 10:08:56.689  5903  5903 I CouchbaseLite/DATABASE: Compiling SQL "SELECT lastSeq FROM kvmeta WHERE name=?"
+09-14 10:08:56.690  5903  5903 I CouchbaseLite/DATABASE: ... SELECT lastSeq FROM kvmeta WHERE name=?
+09-14 10:08:56.690  5903  5903 I CouchbaseLite/DATABASE: ... INSERT OR IGNORE INTO kv_default (version, body, extra, flags, sequence, key) VALUES (?, ?, ?, ?, ?, ?)
+09-14 10:08:56.691  5903  5903 V CouchbaseLite/DATABASE: Saved doc '5130b3db-91c9-486e-ab9e-aed4cdb2c4bb' #1-bc1889a723df7ace6bdcca1e8ec4d2fecd47d1d5; body=98, extra=34
+09-14 10:08:56.691  5903  5903 V CouchbaseLite/DATABASE: {DB#1} Saved '5130b3db-91c9-486e-ab9e-aed4cdb2c4bb' rev #1-bc1889a723df7ace6bdcca1e8ec4d2fecd47d1d5 as seq 1
+09-14 10:08:56.692  5903  5903 V CouchbaseLite/DATABASE: {DB#1} KeyStore(info) set 'SharedKeys'
+09-14 10:08:56.692  5903  5903 I CouchbaseLite/DATABASE: ... INSERT OR REPLACE INTO kv_info (key, version, body) VALUES (?, ?, ?)
+09-14 10:08:56.693  5903  5903 V CouchbaseLite/DATABASE: {DB#1} commit transaction
+09-14 10:08:56.693  5903  5903 I CouchbaseLite/DATABASE: Compiling SQL "INSERT INTO kvmeta (name, lastSeq) VALUES (?, ?) ON CONFLICT (name) DO UPDATE SET lastSeq = excluded.lastSeq"
+09-14 10:08:56.694  5903  5903 I CouchbaseLite/DATABASE: ... INSERT INTO kvmeta (name, lastSeq) VALUES (?, ?) ON CONFLICT (name) DO UPDATE SET lastSeq = excluded.lastSeq
+09-14 10:08:56.694  5903  5903 I CouchbaseLite/DATABASE: COMMIT
+09-14 10:08:56.746  5903  5903 I CouchbaseLite/REPLICATOR: [JAVA] Replicator is starting
+09-14 10:08:56.755  5903  5903 I CouchbaseLite/REPLICATOR: {C4Replicator#3}==> N8litecore18C4RemoteReplicatorE 0x70f81eac18 @0x70f81eac18
+09-14 10:08:56.755  5903  5903 V CouchbaseLite/REPLICATOR: {C4Replicator#3} Replicator not yet created, saving progress level value for later...
+09-14 10:08:56.756  5903  5903 I CouchbaseLite/DATABASE: {DB#4}==> N8litecore14SQLiteDataFileE /data/data/com.example.getstarted_ktx/files/link.cblite2/db.sqlite3 @0x709f032400
+09-14 10:08:56.756  5903  5903 I CouchbaseLite/DATABASE: {DB#4} Opening database
+09-14 10:08:56.757  5903  5903 I CouchbaseLite/DATABASE: PRAGMA cache_size=-10240; PRAGMA mmap_size=52428800; PRAGMA synchronous=normal; PRAGMA journal_size_limit=5242880; PRAGMA case_sensitive_like=true
+09-14 10:08:56.758  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:56.759  5903  5903 I CouchbaseLite/DATABASE: Compiling SQL "SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?"
+09-14 10:08:56.759  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.760  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:56.760  5903  5903 I CouchbaseLite/DATABASE: {N8litecore14CollectionImplE#5}==> N8litecore14CollectionImplE link/_default @0x70f81573a0
+09-14 10:08:56.761  5903  5903 I CouchbaseLite/DATABASE: {N8litecore14CollectionImplE#5} Instantiated
+09-14 10:08:56.761  5903  5903 I CouchbaseLite/DATABASE: ... SELECT substr(name,4) FROM sqlite_master WHERE type='table' AND name GLOB 'kv_*'
+09-14 10:08:56.762  5903  5903 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:56.762  5903  5903 V CouchbaseLite/DATABASE: {DB#4} Next expiration time is 0
+09-14 10:08:56.763  5903  5903 I CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6}==> N8litecore4blip10ConnectionE ->ws://couchgateway.trackmatic.co.za:4984/link/_blipsync @0x709eee5290
+09-14 10:08:56.763  5903  5903 I CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Opening connection...
+09-14 10:08:56.764  5903  5903 I CouchbaseLite/DATABASE: Starting Scheduler<0x709f009780> with 8 threads
+09-14 10:08:56.768  5903  5903 I CouchbaseLite/REPLICATOR: {Repl#7}==> N8litecore4repl10ReplicatorE /data/data/com.example.getstarted_ktx/files/link.cblite2/ ->ws://couchgateway.trackmatic.co.za:4984/link/_blipsync @0x709f021710
+09-14 10:08:56.768  5903  5903 I CouchbaseLite/REPLICATOR: {Repl#7} Push=one-shot, Pull=one-shot, Options={{auth:{password:"********", type:"Basic", username:"407dd1a8-f2ff-4286-8eba-72e9026d4bb2"}, autoPurge:false, headers:{User-Agent:"CouchbaseLite/3.0.0-192 (Java; Android 10; TC26) CE/release, Commit/unofficial@1f4001b9647c Core/3.0.0 (192)"}}}
+09-14 10:08:56.769  5903  5903 V CouchbaseLite/REPLICATOR: {C4Replicator#3} C4RemoteRepl 0x70f81eac18 created Repl 0x709f021710
+09-14 10:08:56.770  5903  5903 V CouchbaseLite/REPLICATOR: {Repl#7} Set progress notification level to 1
+09-14 10:08:56.770  5903  5903 I CouchbaseLite/REPLICATOR: {C4Replicator#3} Starting Replicator {Repl#7}
+09-14 10:08:56.771  5903  6002 V CouchbaseLite/QUERY: RecordEnumerator 0x709f009c08: (default, 110 0)
+09-14 10:08:56.772  5903  6002 I CouchbaseLite/DATABASE: CREATE INDEX IF NOT EXISTS kv_default_conflicts ON kv_default (flags) WHERE (flags & 2) != 0
+09-14 10:08:56.774  5903  6005 I CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8}==> N8litecore4repl12C4SocketImplE ws://couchgateway.trackmatic.co.za:4984/link/_blipsync @0x70f81726f8
+09-14 10:08:56.775  5903  6005 I CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Connecting...
+09-14 10:08:56.776  5903  6002 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:56.778  5903  6002 I CouchbaseLite/DATABASE: SELECT sequence, flags, key, version, length(body), length(extra), 0 FROM kv_default WHERE (flags & 2) != 0
+09-14 10:08:56.778  5903  6002 I CouchbaseLite/DATABASE: Enumerator: SELECT sequence, flags, key, version, length(body), length(extra), 0 FROM kv_default WHERE (flags & 2) != 0
+09-14 10:08:56.779  5903  5903 I CouchbaseLite/REPLICATOR: [JAVA] State changed STOPPED => CONNECTING(0/0): null for Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}
+09-14 10:08:56.779  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} Scanning for pre-existing conflicts...
+09-14 10:08:56.780  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} Found 0 conflicted docs in 0.009 sec
+09-14 10:08:56.781  5903  6002 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.782  5903  6002 V CouchbaseLite/DATABASE: {DB#4} begin transaction
+09-14 10:08:56.782  5903  6002 I CouchbaseLite/DATABASE: BEGIN
+09-14 10:08:56.782  5903  5903 I CouchbaseLite/REPLICATOR: [JAVA] ReplicatorListener.statusChanged, repl: Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}, status: C4ReplicatorStatus{level=2,completed=0,total=0,#docs=0,domain=0,code=0,info=0}
+09-14 10:08:56.783  5903  6002 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.785  5903  6002 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.787  5903  6002 V CouchbaseLite/DATABASE: {DB#4} KeyStore(info) set 'remotes'
+09-14 10:08:56.788  5903  6002 I CouchbaseLite/DATABASE: Compiling SQL "INSERT OR REPLACE INTO kv_info (key, version, body) VALUES (?, ?, ?)"
+09-14 10:08:56.789  5903  6002 I CouchbaseLite/DATABASE: ... INSERT OR REPLACE INTO kv_info (key, version, body) VALUES (?, ?, ?)
+09-14 10:08:56.790  5903  6002 V CouchbaseLite/DATABASE: {DB#4} commit transaction
+09-14 10:08:56.790  5903  6002 I CouchbaseLite/DATABASE: COMMIT
+09-14 10:08:56.792  5903  6002 V CouchbaseLite/REPLICATOR: {Repl#7} Remote-DB ID 1 found for target <ws://couchgateway.trackmatic.co.za:4984/link/_blipsync>
+09-14 10:08:56.793  5903  6002 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.795  5903  6002 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:56.796  5903  6002 I CouchbaseLite/DATABASE: CREATE TABLE IF NOT EXISTS kv_checkpoints (  key TEXT PRIMARY KEY,  sequence INTEGER,  flags INTEGER DEFAULT 0,  version BLOB,  body BLOB,  extra BLOB)
+09-14 10:08:56.797  5903  6002 I CouchbaseLite/DATABASE: Compiling SQL "SELECT sequence, flags, null, version, body, extra FROM kv_checkpoints WHERE key=?"
+09-14 10:08:56.798  5903  6011 I CouchbaseLite/REPLICATOR: [JAVA] status changed: (0, 0) @C4ReplicatorStatus{level=2,completed=0,total=0,#docs=0,domain=0,code=0,info=0} for Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}
+09-14 10:08:56.798  5903  6002 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_checkpoints WHERE key=?
+09-14 10:08:56.799  5903  6002 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:56.800  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} No local checkpoint 'cp-pO5nbF3VGcfWVrbL+AMLM6ifhKg='
+09-14 10:08:56.801  5903  6002 I CouchbaseLite/DATABASE: Compiling SQL "SELECT lastSeq FROM kvmeta WHERE name=?"
+09-14 10:08:56.802  5903  6002 I CouchbaseLite/DATABASE: ... SELECT lastSeq FROM kvmeta WHERE name=?
+09-14 10:08:56.803  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=connecting: connectionState=1, savingChkpt=0
+09-14 10:08:56.804  5903  6011 I CouchbaseLite/REPLICATOR: [JAVA] State changed CONNECTING => CONNECTING(0/0): null for Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}
+09-14 10:08:56.902  5903  6014 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:57.215  5903  6014 I CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Got HTTP response (status 101)
+09-14 10:08:57.216  5903  6014 I CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Connected!
+09-14 10:08:57.216  5903  6014 I CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Connected!
+09-14 10:08:57.217  5903  6014 I CouchbaseLite/NETWORK: [JAVA] WebSocket OPEN
+09-14 10:08:57.217  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=connecting: connectionState=1, savingChkpt=0
+09-14 10:08:57.218  5903  6004 I CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9}==> N8litecore4blip6BLIPIOE ->ws://couchgateway.trackmatic.co.za:4984/link/_blipsync @0x709eec8c10
+09-14 10:08:57.219  5903  6004 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} WebSocket is hungry!
+09-14 10:08:57.219  5903  6004 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} ...Wrote 0 bytes to WebSocket (writeable=1)
+09-14 10:08:57.220  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} Connected!
+09-14 10:08:57.221  5903  6004 V CouchbaseLite/REPLICATOR: {Repl#7} Requesting remote checkpoint 'cp-pO5nbF3VGcfWVrbL+AMLM6ifhKg='
+09-14 10:08:57.221  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Sending 'getCheckpoint' REQ #1 
+09-14 10:08:57.222  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9}     Sending frame: REQ #1 ----, bytes 0--65
+09-14 10:08:57.223  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Sending 68-byte message
+09-14 10:08:57.225  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Finished sending REQ #1 
+09-14 10:08:57.226  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} ...Wrote 68 bytes to WebSocket (writeable=1)
+09-14 10:08:57.227  5903  6008 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10}==> N8litecore4repl6PusherE {Repl#7} @0x70f81e5990
+09-14 10:08:57.228  5903  6008 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Starting push from local seq #1
+09-14 10:08:57.229  5903  6008 I CouchbaseLite/REPLICATOR: {N8litecore4repl21ReplicatorChangesFeedE#11}==> N8litecore4repl21ReplicatorChangesFeedE 0x70f81e5b58 @0x70f81e5b58
+09-14 10:08:57.229  5903  6008 V CouchbaseLite/REPLICATOR: {N8litecore4repl21ReplicatorChangesFeedE#11} Reading up to 200 local changes since #0
+09-14 10:08:57.230  5903  6008 V CouchbaseLite/QUERY: RecordEnumerator 0x709f00ae08: (default, #0..., 100 1)
+09-14 10:08:57.231  5903  6008 I CouchbaseLite/DATABASE: CREATE UNIQUE INDEX IF NOT EXISTS kv_default_seqs ON kv_default (sequence)
+09-14 10:08:57.232  5903  6008 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:57.234  5903  6008 I CouchbaseLite/DATABASE: SELECT sequence, flags, key, version, body, extra, 0 FROM kv_default WHERE sequence > ? ORDER BY sequence
+09-14 10:08:57.235  5903  6003 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12}==> N8litecore4repl6PullerE {Repl#7} @0x70f81e5d10
+09-14 10:08:57.235  5903  6003 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} Starting pull from remote seq ''
+09-14 10:08:57.236  5903  6003 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} msg["revocations"]="true" due to enableAutoPurge()=0 or progressNotificationLevel()=1 > 0
+09-14 10:08:57.237  5903  6009 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Sending 'subChanges' REQ #2 
+09-14 10:08:57.238  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=0
+09-14 10:08:57.238  5903  6003 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} activityLevel=busy: pendingResponseCount=1, _caughtUp=0, _pendingRevMessages=0, _activeIncomingRevs=0
+09-14 10:08:57.239  5903  6003 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} now busy
+09-14 10:08:57.240  5903  6003 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} activityLevel=busy: pendingResponseCount=1, _caughtUp=0, _pendingRevMessages=0, _activeIncomingRevs=0
+09-14 10:08:57.240  5903  6009 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9}     Sending frame: REQ #2 ----, bytes 0--71
+09-14 10:08:57.241  5903  6009 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Sending 74-byte message
+09-14 10:08:57.242  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} now busy
+09-14 10:08:57.243  5903  6004 I CouchbaseLite/REPLICATOR: {C4Replicator#3} State: busy, progress=0.00%
+09-14 10:08:57.244  5903  6008 I CouchbaseLite/DATABASE: Enumerator: SELECT sequence, flags, key, version, body, extra, 0 FROM kv_default WHERE sequence > ? ORDER BY sequence
+09-14 10:08:57.245  5903  6014 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Received 47-byte message
+09-14 10:08:57.246  5903  6004 I CouchbaseLite/REPLICATOR: [JAVA] ReplicatorListener.statusChanged, repl: Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}, status: C4ReplicatorStatus{level=4,completed=0,total=0,#docs=0,domain=0,code=0,info=0}
+09-14 10:08:57.246  5903  6008 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:57.247  5903  6009 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Finished sending REQ #2 
+09-14 10:08:57.249  5903  6008 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Read 1 local changes up to #1: sending 'proposeChanges' with sequences #1 - #1
+09-14 10:08:57.250  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=1
+09-14 10:08:57.251  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} pushStatus=busy, pullStatus=busy, progress=0/0
+09-14 10:08:57.251  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=1
+09-14 10:08:57.252  5903  6009 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} ...Wrote 74 bytes to WebSocket (writeable=1)
+09-14 10:08:57.253  5903  6008 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Caught up, at lastSequence #1
+09-14 10:08:57.253  5903  6026 I CouchbaseLite/REPLICATOR: [JAVA] status changed: (0, 0) @C4ReplicatorStatus{level=4,completed=0,total=0,#docs=0,domain=0,code=0,info=0} for Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}
+09-14 10:08:57.254  5903  6009 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Received frame: ERR #1 ----, length    45
+09-14 10:08:57.255  5903  6008 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} progress +0/+98, 0 docs -- now 0 / 98, 0 docs
+09-14 10:08:57.255  5903  6008 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} activityLevel=busy: pendingResponseCount=1, caughtUp=1, changeLists=1, revsInFlight=0, blobsInFlight=0, awaitingReply=0, revsToSend=0, pushingDocs=1, pendingSequences=1
+09-14 10:08:57.256  5903  6008 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} now busy
+09-14 10:08:57.257  5903  6008 I CouchbaseLite/REPLICATOR: {Repl#7} pushStatus=busy, pullStatus=busy, progress=0/98
+09-14 10:08:57.258  5903  6008 V CouchbaseLite/REPLICATOR: {Repl#7} progress +0/+98, 0 docs -- now 0 / 98, 0 docs
+09-14 10:08:57.258  5903  6008 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=1
+09-14 10:08:57.259  5903  6009 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Receiving ERR #1 
+09-14 10:08:57.259  5903  6026 I CouchbaseLite/REPLICATOR: [JAVA] State changed CONNECTING => BUSY(0/0): null for Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}
+09-14 10:08:57.260  5903  6009 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Finished receiving ERR #1 
+09-14 10:08:57.261  5903  6002 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} activityLevel=busy: pendingResponseCount=1, caughtUp=1, changeLists=1, revsInFlight=0, blobsInFlight=0, awaitingReply=0, revsToSend=0, pushingDocs=1, pendingSequences=1
+09-14 10:08:57.261  5903  6014 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Received 7-byte message
+09-14 10:08:57.262  5903  6009 I CouchbaseLite/REPLICATOR: {Repl#7} No remote checkpoint 'cp-pO5nbF3VGcfWVrbL+AMLM6ifhKg='
+09-14 10:08:57.263  5903  6009 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=1
+09-14 10:08:57.264  5903  6002 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Sending 'proposeChanges' REQ #3 UZ
+09-14 10:08:57.265  5903  6002 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9}     Sending frame: REQ #3 -U-C, bytes 0--125
+09-14 10:08:57.265  5903  6002 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Sending 128-byte message
+09-14 10:08:57.268  5903  6005 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} activityLevel=busy: pendingResponseCount=1, caughtUp=1, changeLists=1, revsInFlight=0, blobsInFlight=0, awaitingReply=0, revsToSend=0, pushingDocs=1, pendingSequences=1
+09-14 10:08:57.269  5903  6002 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Finished sending REQ #3 UZ
+09-14 10:08:57.270  5903  6002 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} ...Wrote 128 bytes to WebSocket (writeable=1)
+09-14 10:08:57.270  5903  6002 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Received frame: RES #2 ----, length     5
+09-14 10:08:57.271  5903  6002 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Receiving RES #2 
+09-14 10:08:57.272  5903  6002 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Finished receiving RES #2 
+09-14 10:08:57.273  5903  6004 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} activityLevel=busy: pendingResponseCount=0, _caughtUp=0, _pendingRevMessages=0, _activeIncomingRevs=0
+09-14 10:08:57.310  5903  6014 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Received 11-byte message
+09-14 10:08:57.312  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Received frame: RES #3 -U-C, length     9
+09-14 10:08:57.313  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Receiving RES #3 UZ
+09-14 10:08:57.314  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Finished receiving RES #3 UZ
+09-14 10:08:57.315  5903  6008 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Got response for 1 local changes (sequences from 1)
+09-14 10:08:57.316  5903  6008 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Queueing rev '5130b3db-91c9-486e-ab9e-aed4cdb2c4bb' #1-bc1889a723df7ace6bdcca1e8ec4d2fecd47d1d5 (seq #1) [1 queued]
+09-14 10:08:57.317  5903  6008 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Sending rev '5130b3db-91c9-486e-ab9e-aed4cdb2c4bb' #1-bc1889a723df7ace6bdcca1e8ec4d2fecd47d1d5 (seq #1) [0/10]
+09-14 10:08:57.318  5903  6008 I CouchbaseLite/DATABASE: Compiling SQL "SELECT sequence, flags, null, version, body, extra FROM kv_default WHERE key=?"
+09-14 10:08:57.319  5903  6008 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_default WHERE key=?
+09-14 10:08:57.320  5903  6008 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Transmitting 'rev' message with '5130b3db-91c9-486e-ab9e-aed4cdb2c4bb' #1-bc1889a723df7ace6bdcca1e8ec4d2fecd47d1d5
+09-14 10:08:57.321  5903  6008 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} activityLevel=busy: pendingResponseCount=1, caughtUp=1, changeLists=0, revsInFlight=1, blobsInFlight=0, awaitingReply=0, revsToSend=0, pushingDocs=1, pendingSequences=1
+09-14 10:08:57.322  5903  6003 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} activityLevel=busy: pendingResponseCount=1, caughtUp=1, changeLists=0, revsInFlight=1, blobsInFlight=0, awaitingReply=0, revsToSend=0, pushingDocs=1, pendingSequences=1
+09-14 10:08:57.326  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Sending 'rev' REQ #4 Z
+09-14 10:08:57.328  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9}     Sending frame: REQ #4 ---C, bytes 0--136
+09-14 10:08:57.330  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Sending 139-byte message
+09-14 10:08:57.332  5903  6005 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} activityLevel=busy: pendingResponseCount=1, caughtUp=1, changeLists=0, revsInFlight=0, blobsInFlight=0, awaitingReply=237, revsToSend=0, pushingDocs=1, pendingSequences=1
+09-14 10:08:57.337  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Finished sending REQ #4 Z
+09-14 10:08:57.340  5903  6006 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} ...Wrote 139 bytes to WebSocket (writeable=1)
+09-14 10:08:57.373  5903  6014 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Received 7-byte message
+09-14 10:08:57.375  5903  6007 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Received frame: RES #4 ----, length     5
+09-14 10:08:57.376  5903  6007 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Receiving RES #4 
+09-14 10:08:57.377  5903  6007 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Finished receiving RES #4 
+09-14 10:08:57.378  5903  6002 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Completed rev 5130b3db-91c9-486e-ab9e-aed4cdb2c4bb #1-bc1889a723df7ace6bdcca1e8ec4d2fecd47d1d5 (seq #1)
+09-14 10:08:57.379  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} documentEnded 5130b3db-91c9-486e-ab9e-aed4cdb2c4bb 1-bc1889a723df7ace6bdcca1e8ec4d2fecd47d1d5 flags=02 (0/0)
+09-14 10:08:57.380  5903  6002 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} Checkpoint now [0-1]
+09-14 10:08:57.381  5903  6002 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} progress +98/+0, 1 docs -- now 98 / 98, 1 docs
+09-14 10:08:57.383  5903  6002 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} activityLevel=stopped: pendingResponseCount=0, caughtUp=1, changeLists=0, revsInFlight=0, blobsInFlight=0, awaitingReply=0, revsToSend=0, pushingDocs=0, pendingSequences=0
+09-14 10:08:57.384  5903  6002 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} now stopped
+09-14 10:08:57.385  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} pushStatus=stopped, pullStatus=busy, progress=98/98
+09-14 10:08:57.387  5903  6002 V CouchbaseLite/REPLICATOR: {Repl#7} progress +98/+0, 1 docs -- now 98 / 98, 1 docs
+09-14 10:08:57.388  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=1
+09-14 10:08:57.390  5903  6002 V CouchbaseLite/REPLICATOR: {Repl#7} Saving remote checkpoint 'cp-pO5nbF3VGcfWVrbL+AMLM6ifhKg=' over rev='': {"time":1663142937,"local":1} ...
+09-14 10:08:57.391  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=1
+09-14 10:08:57.392  5903  6008 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Sending 'setCheckpoint' REQ #5 
+09-14 10:08:57.394  5903  6008 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9}     Sending frame: REQ #5 ----, bytes 0--99
+09-14 10:08:57.395  5903  6008 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Sending 102-byte message
+09-14 10:08:57.396  5903  6009 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=1
+09-14 10:08:57.398  5903  6008 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Finished sending REQ #5 
+09-14 10:08:57.399  5903  6008 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} ...Wrote 102 bytes to WebSocket (writeable=1)
+09-14 10:08:57.402  5903  6010 I CouchbaseLite/DATABASE: {DB#13}==> N8litecore14SQLiteDataFileE /data/data/com.example.getstarted_ktx/files/link.cblite2/db.sqlite3 @0x709f9c9ec0
+09-14 10:08:57.404  5903  6010 I CouchbaseLite/DATABASE: {DB#13} Opening database
+09-14 10:08:57.405  5903  6010 I CouchbaseLite/DATABASE: PRAGMA cache_size=-10240; PRAGMA mmap_size=52428800; PRAGMA synchronous=normal; PRAGMA journal_size_limit=5242880; PRAGMA case_sensitive_like=true
+09-14 10:08:57.407  5903  6010 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:57.408  5903  6010 I CouchbaseLite/DATABASE: Compiling SQL "SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?"
+09-14 10:08:57.409  5903  6010 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:57.410  5903  6010 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:57.411  5903  6010 I CouchbaseLite/DATABASE: {N8litecore14CollectionImplE#14}==> N8litecore14CollectionImplE link/_default @0x70fc825130
+09-14 10:08:57.411  5903  6010 I CouchbaseLite/DATABASE: {N8litecore14CollectionImplE#14} Instantiated
+09-14 10:08:57.412  5903  6010 I CouchbaseLite/DATABASE: ... SELECT substr(name,4) FROM sqlite_master WHERE type='table' AND name GLOB 'kv_*'
+09-14 10:08:57.413  5903  6010 I CouchbaseLite/DATABASE: ... SELECT sql FROM sqlite_master WHERE name = ? AND type = ? AND tbl_name = ?
+09-14 10:08:57.414  5903  6010 V CouchbaseLite/DATABASE: {DB#13} Next expiration time is 0
+09-14 10:08:57.415  5903  6010 V CouchbaseLite/DATABASE: {DB#13} begin transaction
+09-14 10:08:57.416  5903  6010 I CouchbaseLite/DATABASE: BEGIN
+09-14 10:08:57.416  5903  6010 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:57.417  5903  6010 I CouchbaseLite/DATABASE: Compiling SQL "UPDATE kv_default SET flags = ((flags + 0x10000) | ?) WHERE key=? AND sequence=?"
+09-14 10:08:57.418  5903  6014 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Received 15-byte message
+09-14 10:08:57.419  5903  6010 I CouchbaseLite/DATABASE: ... UPDATE kv_default SET flags = ((flags + 0x10000) | ?) WHERE key=? AND sequence=?
+09-14 10:08:57.420  5903  6005 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Received frame: RES #5 ----, length    13
+09-14 10:08:57.421  5903  6005 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Receiving RES #5 
+09-14 10:08:57.421  5903  6005 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Finished receiving RES #5 
+09-14 10:08:57.422  5903  6006 I CouchbaseLite/REPLICATOR: {Repl#7} Saved remote checkpoint 'cp-pO5nbF3VGcfWVrbL+AMLM6ifhKg=' as rev='0-1'
+09-14 10:08:57.424  5903  6010 V CouchbaseLite/DATABASE: {DB#13} commit transaction
+09-14 10:08:57.424  5903  6010 I CouchbaseLite/DATABASE: COMMIT
+09-14 10:08:57.425  5903  6006 V CouchbaseLite/DATABASE: {DB#4} begin transaction
+09-14 10:08:57.426  5903  6006 I CouchbaseLite/DATABASE: BEGIN
+09-14 10:08:57.427  5903  6010 I CouchbaseLite/REPLICATOR: {N8litecore4repl8DBAccessE#15}==> N8litecore4repl8DBAccessE 0x709f039420 @0x709f039420
+09-14 10:08:57.428  5903  6010 V CouchbaseLite/REPLICATOR: {N8litecore4repl8DBAccessE#15} Marked 1 revs as synced-to-server in 24.14ms (41/sec)
+09-14 10:08:57.428  5903  6006 I CouchbaseLite/DATABASE: ... SELECT sequence, flags, null, version, body, extra FROM kv_info WHERE key=?
+09-14 10:08:57.429  5903  6006 V CouchbaseLite/DATABASE: {DB#4} KeyStore(checkpoints) set 'cp-pO5nbF3VGcfWVrbL+AMLM6ifhKg='
+09-14 10:08:57.430  5903  6006 I CouchbaseLite/DATABASE: Compiling SQL "INSERT OR REPLACE INTO kv_checkpoints (key, version, body) VALUES (?, ?, ?)"
+09-14 10:08:57.431  5903  6006 I CouchbaseLite/DATABASE: ... INSERT OR REPLACE INTO kv_checkpoints (key, version, body) VALUES (?, ?, ?)
+09-14 10:08:57.432  5903  6006 V CouchbaseLite/DATABASE: {DB#4} commit transaction
+09-14 10:08:57.432  5903  6006 I CouchbaseLite/DATABASE: COMMIT
+09-14 10:08:57.433  5903  6006 I CouchbaseLite/REPLICATOR: {Repl#7} Saved local checkpoint 'cp-pO5nbF3VGcfWVrbL+AMLM6ifhKg=': {"time":1663142937,"local":1}
+09-14 10:08:57.434  5903  6006 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=0
+09-14 10:08:57.445  5903  6007 I CouchbaseLite/REPLICATOR: [JAVA] C4ReplicatorListener.documentEnded, repl: Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}, pushing: true
+09-14 10:08:57.448  5903  6007 I CouchbaseLite/REPLICATOR: {C4Replicator#3} State: busy, progress=100.00%
+09-14 10:08:57.452  5903  6007 I CouchbaseLite/REPLICATOR: [JAVA] ReplicatorListener.statusChanged, repl: Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}, status: C4ReplicatorStatus{level=4,completed=98,total=98,#docs=1,domain=0,code=0,info=0}
+09-14 10:08:57.453  5903  6007 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=0
+09-14 10:08:57.454  5903  5903 I CouchbaseLite/DATABASE: Compiling SQL "SELECT count(*) FROM kv_default WHERE (flags & 1) != 1"
+09-14 10:08:57.455  5903  5903 I CouchbaseLite/DATABASE: ... SELECT count(*) FROM kv_default WHERE (flags & 1) != 1
+09-14 10:08:57.456  5903  6030 I CouchbaseLite/REPLICATOR: [JAVA] notifyDocumentEnded: %sDocumentReplication{repl=Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}, #docs=1}
+09-14 10:08:57.464  5903  6031 I CouchbaseLite/REPLICATOR: [JAVA] status changed: (0, 0) @C4ReplicatorStatus{level=4,completed=98,total=98,#docs=1,domain=0,code=0,info=0} for Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}
+09-14 10:08:57.477  5903  6031 I CouchbaseLite/REPLICATOR: [JAVA] State changed BUSY => BUSY(98/98): null for Replicator{@0xc25b292(<->),Database{@0x1222860, name='link'} => URLEndpoint{url=ws://couchgateway.trackmatic.co.za:4984/link}}
+09-14 10:08:57.585  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=0
+09-14 10:09:03.236  5903  6014 V CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Received 59-byte message
+09-14 10:09:03.239  5903  6003 V CouchbaseLite/NETWORK: {N8litecore4blip6BLIPIOE#9} Received frame: REQ #1 --NC, length    57
+09-14 10:09:03.244  5903  6003 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Receiving 'changes' REQ #1 NZ
+09-14 10:09:03.249  5903  6003 V CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Finished receiving 'changes' REQ #1 NZ
+09-14 10:09:03.254  5903  6002 I CouchbaseLite/REPLICATOR: {N8litecore4repl9RevFinderE#16}==> N8litecore4repl9RevFinderE {Repl#7} @0x709f03a790
+09-14 10:09:03.260  5903  6002 V CouchbaseLite/REPLICATOR: {N8litecore4repl9RevFinderE#16} Handling 'changes' REQ#1
+09-14 10:09:03.264  5903  6002 I CouchbaseLite/REPLICATOR: {N8litecore4repl9RevFinderE#16} Caught up with remote changes
+09-14 10:09:03.267  5903  6002 V CouchbaseLite/REPLICATOR: {N8litecore4repl9RevFinderE#16} now idle
+09-14 10:09:03.270  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} pushStatus=stopped, pullStatus=busy, progress=98/98
+09-14 10:09:03.273  5903  6002 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=2, savingChkpt=0
+09-14 10:09:03.275  5903  6009 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} activityLevel=stopped: pendingResponseCount=0, _caughtUp=1, _pendingRevMessages=0, _activeIncomingRevs=0
+09-14 10:09:03.276  5903  6009 V CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} now stopped
+09-14 10:09:03.277  5903  6009 I CouchbaseLite/REPLICATOR: {Repl#7} pushStatus=stopped, pullStatus=stopped, progress=98/98
+09-14 10:09:03.278  5903  6009 I CouchbaseLite/REPLICATOR: {Repl#7} Replication complete! Closing connection
+09-14 10:09:03.279  5903  6009 I CouchbaseLite/REPLICATOR: {Repl#7} Told to stop!
+09-14 10:09:03.280  5903  6009 I CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Closing with code 1000, msg ''
+09-14 10:09:03.284  5903  6009 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=busy: connectionState=3, savingChkpt=0
+09-14 10:09:03.286  5903  6006 I CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} Requesting close with status=1000, message=''
+09-14 10:09:03.306  5903  6014 V CouchbaseLite/NETWORK: [JAVA] WebSocket CLOSED with code: 1000()
+09-14 10:09:03.307  5903  6014 I CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} WebSocket closed normally
+09-14 10:09:03.308  5903  6014 I CouchbaseLite/NETWORK: {N8litecore4repl12C4SocketImplE#8} sent 511 bytes, rcvd 146, in 6.091 sec (84/sec, 24/sec)
+09-14 10:09:03.310  5903  6007 I CouchbaseLite/NETWORK: {N8litecore4blip10ConnectionE#6} Closed with WebSocket/HTTP status 1000: 
+09-14 10:09:03.312  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} Connection closed with WebSocket/HTTP status 1000: "" (state=3)
+09-14 10:09:03.313  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} activityLevel=stopped: connectionState=0, savingChkpt=0
+09-14 10:09:03.314  5903  6004 I CouchbaseLite/REPLICATOR: {Repl#7} now stopped
+09-14 10:09:03.315  5903  6003 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PusherE#10} activityLevel=stopped: pendingResponseCount=0, caughtUp=1, changeLists=0, revsInFlight=0, blobsInFlight=0, awaitingReply=0, revsToSend=0, pushingDocs=0, pendingSequences=0
+09-14 10:09:03.316  5903  6003 I CouchbaseLite/REPLICATOR: {N8litecore4repl6PullerE#12} activityLevel=stopped: pendingResponseCount=0, _caughtUp=1, _pendingRevMessages=0, _activeIncomingRevs=0
+09-14 10:09:03.318  5903  6004 V CouchbaseLite/DATABASE: PRAGMA optimize ... 400
+09-14 10:09:03.319  5903  6007 I CouchbaseLite/REPLICATOR: BLIP sent 5 msgs (511 bytes), rcvd 1 msgs (146 bytes) in 6.102 sec. Max outbox depth was 1, avg 1.00
+09-14 10:09:03.321  5903  6004 I CouchbaseLite/DATABASE: ... PRAGMA page_count
+09-14 10:09:03.322  5903  6004 I CouchbaseLite/DATABASE: ... PRAGMA freelist_count
+09-14 10:09:03.323  5903  6004 V CouchbaseLite/DATABASE: {DB#4} Housekeeping: 0 of 11 pages free (0%)
+09-14 10:09:03.324  5903  6004 V CouchbaseLite/DATABASE: {DB#4} Closed SQLite database
+09-14 10:09:03.325  5903  6004 I CouchbaseLite/DATABASE: {DB#4} Closing database
+09-14 10:09:03.326  5903  6004 I Couc
