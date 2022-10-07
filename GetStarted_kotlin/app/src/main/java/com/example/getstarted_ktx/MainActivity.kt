@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity() {
 
         // Not Working
         val username = "407dd1a8-f2ff-4286-8eba-72e9026d4bb2"
-        val password = "c650fd9d-2801-4013-a3ca-b1a826679295"
+        val password = "2d52c9a2-1f78-4826-9695-92ceb02026e4"
 
         // Working
-//        val username = "edaa9567-e315-4ef9-944e-0aa9ebda2bcf"
-//        val password = "933acd94-b045-43ce-b8aa-cdeb9586e6e9"
+//        val username = "036da4fb-eb3a-4310-a560-a8b4b870c218"
+//        val password = "405f2e98-e61c-4e35-9585-556afd1bfba0"
 
 
         // initialize couchbase
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         // Save Document
         // commenting out this line will make it sync correctly for the Not Working Credentials
-        saveFirstDocumentToDatabase(username, database)
+//        saveFirstDocumentToDatabase(username, database)
 
 
         startReplicator(username, password, database)
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     private fun saveFirstDocumentToDatabase(username: String, database: Database) {
         val meta = mutableMapOf<String, Any>()
         meta["type"] = "test"
-        meta["sync"] = listOf("device:$username:device")
+        meta["sync"] = listOf("link:gk_l_facility_19g68krd8v07k:loads")
 
         val payload = mutableMapOf<String, Any>()
         payload["id"] = "123456"
